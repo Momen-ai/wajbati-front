@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="GSVmsdwGLl2P14EPOkY2PjSdz2UBqif02SZnlkgT">
+
+    <title>Wajbati</title>
+
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="rounded-circle bg-primary-custom d-flex align-items-center justify-content-center text-light me-2"
+                    style="width:40px;height:40px">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <span class="brand-text">Wajbati</span>
+            </a>
+            <button class="navbar-toggler border border-secondary border-opacity-10" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="meals.html">Meals</a></li>
+                    <li class="nav-item"><a class="nav-link " href="chefs.html">Chefs</a></li>
+                    <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+                </ul>
+
+                <ul class="navbar-nav align-items-lg-center">
+                    <li class="nav-item me-3">
+                        <a class="nav-link position-relative px-2" href="cart.html">
+                            <i class="fa fa-shopping-bag fa-lg"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count border border-white">
+                                0
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown me-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe me-1"></i> English
+                        </a>
+                        <ul class="dropdown-menu border border-secondary border-opacity-10 shadow">
+                            <li><a class="dropdown-item" href="http://127.0.0.1:8080/lang/en">English</a></li>
+                            <li><a class="dropdown-item" href="http://127.0.0.1:8080/lang/ar">العربية</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item d-flex gap-2">
+                        <a href="login.html" class="btn btn-outline-primary btn-sm px-3">Login</a>
+                        <a href="register.html" class="btn btn-primary btn-sm px-3 shadow">Register</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Flash Messages -->
+
+
+    <!-- Content -->
+    <main>
+        <!-- Hero Section -->
+        <div class="container my-5">
+            <div class="hero-section text-center text-lg-start">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <span class="badge bg-warning text-light mb-3 px-3 py-2 rounded-pill fw-bold"><i
+                                class="fas fa-star me-1"></i> #1 Homemade Food App</span>
+                        <h1 class="hero-title pt-2">Delicious Homemade Meals,<br><span
+                                class="text-primary-custom">brought to your doorstep.</span></h1>
+                        <p class="lead text-light mb-4">Order healthy, fresh, and authentic food from local home
+                            kitchens.</p>
+                        <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                            <a href="meals.html" class="btn btn-primary btn-lg shadow">
+                                <i class="fas fa-search me-2"></i> Browse Meals
+                            </a>
+                            <a href="register.html" class="btn btn-outline-secondary btn-lg bg-darker text-light">
+                                Join as a Chef
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <div class="position-relative d-inline-block">
+                            <div class="position-absolute top-50 start-50 translate-middle bg-primary-custom rounded-circle"
+                                style="width:300px;height:300px;opacity:0.1;z-index:0;filter:blur(40px)"></div>
+                            <img src="images/hero-plate.png"
+                                onerror="this.src='https://placehold.co/500x400/png?text=Delicious+Food'"
+                                alt="Delicious Food" class="position-relative"
+                                style="z-index:1;max-width:100%;height:auto;filter:drop-shadow(0 20px 30px rgba(0,0,0,0.15))">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="container mb-5">
+            <h3 class="fw-bold mb-4 text-center">Explore Categories</h3>
+            <div class="row justify-content-center g-4">
+                <div class="col-6 col-md-3">
+                    <a href="meals.html?category=1" class="text-decoration-none">
+                        <div
+                            class="card shadow-card border border-secondary border-opacity-10 text-center p-4 h-100 hover-lift">
+                            <div class="rounded-circle bg-secondary text-light d-flex align-items-center justify-content-center mx-auto mb-3 text-primary"
+                                style="width:70px; height:70px; font-size: 1.5rem;">
+                                <i class="fas fa-utensils"></i> <!-- Or category icon if exists -->
+                            </div>
+                            <h6 class="fw-bold text-light">Oriental</h6>
+                            <small class="text-light">0 Meals</small>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="meals.html?category=2" class="text-decoration-none">
+                        <div
+                            class="card shadow-card border border-secondary border-opacity-10 text-center p-4 h-100 hover-lift">
+                            <div class="rounded-circle bg-secondary text-light d-flex align-items-center justify-content-center mx-auto mb-3 text-primary"
+                                style="width:70px; height:70px; font-size: 1.5rem;">
+                                <i class="fas fa-utensils"></i> <!-- Or category icon if exists -->
+                            </div>
+                            <h6 class="fw-bold text-light">Western</h6>
+                            <small class="text-light">0 Meals</small>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="meals.html?category=3" class="text-decoration-none">
+                        <div
+                            class="card shadow-card border border-secondary border-opacity-10 text-center p-4 h-100 hover-lift">
+                            <div class="rounded-circle bg-secondary text-light d-flex align-items-center justify-content-center mx-auto mb-3 text-primary"
+                                style="width:70px; height:70px; font-size: 1.5rem;">
+                                <i class="fas fa-utensils"></i> <!-- Or category icon if exists -->
+                            </div>
+                            <h6 class="fw-bold text-light">Sweets</h6>
+                            <small class="text-light">1 Meals</small>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="meals.html?category=4" class="text-decoration-none">
+                        <div
+                            class="card shadow-card border border-secondary border-opacity-10 text-center p-4 h-100 hover-lift">
+                            <div class="rounded-circle bg-secondary text-light d-flex align-items-center justify-content-center mx-auto mb-3 text-primary"
+                                style="width:70px; height:70px; font-size: 1.5rem;">
+                                <i class="fas fa-utensils"></i> <!-- Or category icon if exists -->
+                            </div>
+                            <h6 class="fw-bold text-light">Fast Food</h6>
+                            <small class="text-light">1 Meals</small>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="meals.html?category=5" class="text-decoration-none">
+                        <div
+                            class="card shadow-card border border-secondary border-opacity-10 text-center p-4 h-100 hover-lift">
+                            <div class="rounded-circle bg-secondary text-light d-flex align-items-center justify-content-center mx-auto mb-3 text-primary"
+                                style="width:70px; height:70px; font-size: 1.5rem;">
+                                <i class="fas fa-utensils"></i> <!-- Or category icon if exists -->
+                            </div>
+                            <h6 class="fw-bold text-light">Traditional</h6>
+                            <small class="text-light">2 Meals</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popular Meals -->
+        <div class="container mb-5">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <div>
+                    <h2 class="mb-1">Popular Meals</h2>
+                    <p class="text-light mb-0">Our customers&#039; favorites this week</p>
+                </div>
+                <a href="meals.html" class="btn btn-link text-decoration-none fw-bold">View All <i
+                        class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-card border border-secondary border-opacity-10 h-100 meal-card">
+                        <div class="meal-card-img-wrapper">
+                            <img src="images/meals/HTLNuKsEwWabiFHijoJXuod2TbUI0YlMtmOVrR2U.jpg" alt="Musakhn">
+                            <span class="card-badge text-primary-custom">Traditional</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0 text-truncate">Musakhn</h5>
+                                <span class="fw-bold text-primary">$50.00</span>
+                            </div>
+                            <p class="text-light small mb-1 text-truncate">Consequatur Do labo</p>
+                            <div class="mb-3 text-warning small">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-light ms-1" style="font-size: 0.7rem;">(0)</span>
+                            </div>
+
+                            <div
+                                class="d-flex align-items-center justify-content-between border-top border-secondary border-secondary pt-3 mt-auto">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-user-circle fa-lg text-light me-2"></i>
+                                    <small class="fw-bold text-light">Ahmed</small>
+                                </div>
+                                <a href="meal-details.html"
+                                    class="btn btn-sm btn-outline-primary rounded-pill px-3">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-card border border-secondary border-opacity-10 h-100 meal-card">
+                        <div class="meal-card-img-wrapper">
+                            <img src="images/meals/C2J9ap9FCBZLSX3gYmVDy3X49QvpuJH1mvELz9bv.jpg" alt="Kunafa">
+                            <span class="card-badge text-primary-custom">Sweets</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0 text-truncate">Kunafa</h5>
+                                <span class="fw-bold text-primary">$40.00</span>
+                            </div>
+                            <p class="text-light small mb-1 text-truncate">Est possimus blandi</p>
+                            <div class="mb-3 text-warning small">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-light ms-1" style="font-size: 0.7rem;">(0)</span>
+                            </div>
+
+                            <div
+                                class="d-flex align-items-center justify-content-between border-top border-secondary border-secondary pt-3 mt-auto">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-user-circle fa-lg text-light me-2"></i>
+                                    <small class="fw-bold text-light">Ahmed</small>
+                                </div>
+                                <a href="meal-details.html"
+                                    class="btn btn-sm btn-outline-primary rounded-pill px-3">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-card border border-secondary border-opacity-10 h-100 meal-card">
+                        <div class="meal-card-img-wrapper">
+                            <img src="images/meals/ZTBfvK2afPlBViFCX8yY0WA7dNNqMZI2vLJG5Wxl.jpg" alt="Mahshy">
+                            <span class="card-badge text-primary-custom">Traditional</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0 text-truncate">Mahshy</h5>
+                                <span class="fw-bold text-primary">$60.00</span>
+                            </div>
+                            <p class="text-light small mb-1 text-truncate">Fugit excepturi exe</p>
+                            <div class="mb-3 text-warning small">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-light ms-1" style="font-size: 0.7rem;">(0)</span>
+                            </div>
+
+                            <div
+                                class="d-flex align-items-center justify-content-between border-top border-secondary border-secondary pt-3 mt-auto">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-user-circle fa-lg text-light me-2"></i>
+                                    <small class="fw-bold text-light">Momen</small>
+                                </div>
+                                <a href="meal-details.html"
+                                    class="btn btn-sm btn-outline-primary rounded-pill px-3">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-card border border-secondary border-opacity-10 h-100 meal-card">
+                        <div class="meal-card-img-wrapper">
+                            <img src="images/meals/2n1k1cJMc92hyIDbhqGhYems0pii7Le5z1MNfJSB.jpg" alt="Pizza">
+                            <span class="card-badge text-primary-custom">Fast Food</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0 text-truncate">Pizza</h5>
+                                <span class="fw-bold text-primary">$30.00</span>
+                            </div>
+                            <p class="text-light small mb-1 text-truncate">Et ea dolore quasi c</p>
+                            <div class="mb-3 text-warning small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-light ms-1" style="font-size: 0.7rem;">(1)</span>
+                            </div>
+
+                            <div
+                                class="d-flex align-items-center justify-content-between border-top border-secondary border-secondary pt-3 mt-auto">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-user-circle fa-lg text-light me-2"></i>
+                                    <small class="fw-bold text-light">Momen</small>
+                                </div>
+                                <a href="meal-details.html"
+                                    class="btn btn-sm btn-outline-primary rounded-pill px-3">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Chefs -->
+        <div class="container mb-5 pb-5">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <div>
+                    <h2 class="mb-1">Meet Our Talented Chefs</h2>
+                    <p class="text-light mb-0">Local families sharing their culinary heritage</p>
+                </div>
+                <a href="chefs.html" class="btn btn-link text-decoration-none fw-bold">View All <i
+                        class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <div
+                        class="card shadow-card border border-secondary border-opacity-10 text-center p-4 h-100 hover-lift">
+                        <div class="position-relative mx-auto mb-3">
+                            <img src="images/chefs/MN1owVgbSbc6BWkvZ4IcgOR5rNvl8rtOt4IJBdA1.jpg"
+                                class="rounded-circle shadow object-fit-cover" style="width:100px; height:100px;"
+                                alt="Ahmed">
+                        </div>
+                        <h6 class="fw-bold mb-1 text-light">Ahmed</h6>
+                        <small class="text-light d-block mb-3">Local Chef</small>
+                        <a href="chef-details.html" class="btn btn-sm btn-outline-primary rounded-pill px-3">View
+                            Kitchen</a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div
+                        class="card shadow-card border border-secondary border-opacity-10 text-center p-4 h-100 hover-lift">
+                        <div class="position-relative mx-auto mb-3">
+                            <img src="images/chefs/MN1owVgbSbc6BWkvZ4IcgOR5rNvl8rtOt4IJBdA1.jpg"
+                                class="rounded-circle shadow object-fit-cover" style="width:100px; height:100px;"
+                                alt="Momen">
+                        </div>
+                        <h6 class="fw-bold mb-1 text-light">Momen</h6>
+                        <small class="text-light d-block mb-3">Local Chef</small>
+                        <a href="chef-details.html" class="btn btn-sm btn-outline-primary rounded-pill px-3">View
+                            Kitchen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-darker text-light border-top border-secondary border-secondary pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <a class="navbar-brand d-flex align-items-center mb-3 text-light" href="#">
+                        <i class="fas fa-utensils text-primary-custom me-2 fa-lg"></i>
+                        <span class="fw-bold h4 m-0">Wajbati</span>
+                    </a>
+                    <p class="text-light small">Connecting food lovers with home chefs. Experience the taste of home
+                        anywhere.</p>
+                </div>
+                <div class="col-md-2 col-6">
+                    <h6 class="fw-bold mb-3">Links</h6>
+                    <ul class="list-unstyled small text-light">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-light">Home</a></li>
+                        <li class="mb-2"><a href="meals.html" class="text-decoration-none text-light">Meals</a></li>
+                        <li class="mb-2"><a href="chefs.html" class="text-decoration-none text-light">Chefs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled small text-light">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Privacy
+                                Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Terms of
+                                Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Stay Updated</h6>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-primary" type="button"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary border-secondary pt-3 text-center small text-light">
+                &copy; 2026 Wajbati. All rights reserved. | Contact: contact@wajbati.com
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

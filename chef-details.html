@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="keILC6Wmmo8ALjNJAsbVJOW7oGzXrXqr8QDxSnDB">
+
+    <title>Wajbati</title>
+
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="rounded-circle bg-primary-custom d-flex align-items-center justify-content-center text-light me-2"
+                    style="width:40px;height:40px">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <span class="brand-text">Wajbati</span>
+            </a>
+            <button class="navbar-toggler border border-secondary border-opacity-10" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="meals.html">Meals</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="chefs.html">Chefs</a></li>
+                    <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+                </ul>
+
+                <ul class="navbar-nav align-items-lg-center">
+                    <li class="nav-item me-3">
+                        <a class="nav-link position-relative px-2" href="cart.html">
+                            <i class="fa fa-shopping-bag fa-lg"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count border border-white">
+                                0
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown me-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe me-1"></i> English
+                        </a>
+                        <ul class="dropdown-menu border border-secondary border-opacity-10 shadow">
+                            <li><a class="dropdown-item" href="http://127.0.0.1:8080/lang/en">English</a></li>
+                            <li><a class="dropdown-item" href="http://127.0.0.1:8080/lang/ar">العربية</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item d-flex gap-2">
+                        <a href="login.html" class="btn btn-outline-primary btn-sm px-3">Login</a>
+                        <a href="register.html" class="btn btn-primary btn-sm px-3 shadow">Register</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Flash Messages -->
+
+
+    <!-- Content -->
+    <main>
+        <!-- Chef Hero Header -->
+        <div class="position-relative border-bottom border-secondary border-opacity-10"
+            style="background: url('images/meals/HTLNuKsEwWabiFHijoJXuod2TbUI0YlMtmOVrR2U.jpg') center/cover no-repeat; min-height: 400px;">
+            <!-- Dark Overlay -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+            <!-- Glassmorphism Gradient -->
+            <div class="position-absolute top-0 start-0 w-100 h-100"
+                style="background: linear-gradient(to top, var(--bg-light) 0%, rgba(18,18,18,0.3) 100%);"></div>
+
+            <div class="container position-relative z-1 h-100 pb-4 d-flex flex-column justify-content-end"
+                style="min-height: 400px;">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item"><a href="index.html"
+                                class="text-decoration-none text-muted hover-light">Home</a></li>
+                        <li class="breadcrumb-item"><a href="chefs.html"
+                                class="text-decoration-none text-muted hover-light">Chefs</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Momen</li>
+                    </ol>
+                </nav>
+
+                <div class="row align-items-end">
+                    <!-- Chef Avatar -->
+                    <div class="col-auto text-center mb-3 mb-md-0 position-relative">
+                        <div class="rounded-circle p-2 bg-card shadow-lg"
+                            style="width:160px; height:160px; transform: translateY(20px);">
+                            <img src="images/chefs/MN1owVgbSbc6BWkvZ4IcgOR5rNvl8rtOt4IJBdA1.jpg"
+                                class="rounded-circle w-100 h-100 object-fit-cover" alt="Momen">
+                        </div>
+                    </div>
+                    <!-- Chef Info -->
+                    <div class="col pb-2 pb-md-0 ms-md-3 text-center text-md-start">
+                        <h1 class="display-5 fw-bold mb-1 text-white">Momen's Kitchen</h1>
+                        <p class="text-primary-custom lead fw-medium mb-3"><i class="fas fa-map-marker-alt me-2"></i>
+                            Local Chef</p>
+
+                        <div
+                            class="d-flex flex-wrap justify-content-center justify-content-md-start gap-3 gap-md-4 mb-2">
+                            <div
+                                class="d-flex align-items-center bg-card bg-opacity-75 px-3 py-2 rounded-pill border border-secondary border-opacity-25 shadow-sm backdrop-blur">
+                                <i class="fas fa-star text-warning me-2 fa-lg"></i>
+                                <span class="fw-bold text-white me-1">4.8</span>
+                                <span class="text-muted small">(150 Reviews)</span>
+                            </div>
+                            <div
+                                class="d-flex align-items-center bg-card bg-opacity-75 px-3 py-2 rounded-pill border border-secondary border-opacity-25 shadow-sm backdrop-blur">
+                                <i class="fas fa-utensils text-primary-custom me-2 fa-lg"></i>
+                                <span class="fw-bold text-white me-1">2</span>
+                                <span class="text-muted small">Meals Available</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mb-5 pb-5 mt-5 pt-3">
+            <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-center align-items-md-end mb-5">
+                <div class="text-center text-md-start mb-3 mb-md-0">
+                    <h2 class="fw-bold text-white mb-2">Chef's Menu</h2>
+                    <p class="text-muted m-0">Discover the signature dishes by Momen</p>
+                </div>
+                <!-- Optional: Filter for chef's menu -->
+                <div class="btn-group shadow-sm">
+                    <button class="btn btn-outline-secondary text-white border-opacity-25 active">All</button>
+                    <button class="btn btn-outline-secondary text-white border-opacity-25">Popular</button>
+                    <button class="btn btn-outline-secondary text-white border-opacity-25">New</button>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Meal 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-card border border-secondary border-opacity-10 h-100 meal-card bg-card overflow-hidden"
+                        style="border-radius: 16px;">
+                        <div class="meal-card-img-wrapper position-relative">
+                            <a href="meal-details.html">
+                                <img src="images/meals/2n1k1cJMc92hyIDbhqGhYems0pii7Le5z1MNfJSB.jpg" alt="Pizza"
+                                    class="w-100 h-100 object-fit-cover">
+                            </a>
+                            <span class="card-badge bg-card text-primary-custom fw-bold shadow-sm">Fast Food</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="fw-bold mb-0 text-truncate"><a href="meal-details.html"
+                                        class="text-white text-decoration-none hover-primary">Pizza</a></h4>
+                                <span class="fw-bold text-primary-custom fs-5">$30.00</span>
+                            </div>
+                            <p class="text-muted small mb-4 text-truncate">Delicious homemade pizza with fresh
+                                ingredients.</p>
+
+                            <div class="border-top border-secondary border-opacity-25 pt-4 mt-auto">
+                                <form action="cart.html/add" method="POST" class="w-100">
+                                    <input type="hidden" name="_token" value="keILC6Wmmo8ALjNJAsbVJOW7oGzXrXqr8QDxSnDB">
+                                    <input type="hidden" name="meal_id" value="3">
+                                    <button type="submit"
+                                        class="btn btn-primary w-100 rounded-pill py-2 fw-semibold shadow-sm hover-lift">
+                                        <i class="fas fa-shopping-bag me-2"></i> Add to Cart
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meal 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-card border border-secondary border-opacity-10 h-100 meal-card bg-card overflow-hidden"
+                        style="border-radius: 16px;">
+                        <div class="meal-card-img-wrapper position-relative">
+                            <a href="meal-details.html">
+                                <img src="images/meals/ZTBfvK2afPlBViFCX8yY0WA7dNNqMZI2vLJG5Wxl.jpg" alt="Mahshy"
+                                    class="w-100 h-100 object-fit-cover">
+                            </a>
+                            <span class="card-badge bg-card text-primary-custom fw-bold shadow-sm">Traditional</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="fw-bold mb-0 text-truncate"><a href="meal-details.html"
+                                        class="text-white text-decoration-none hover-primary">Mahshy</a></h4>
+                                <span class="fw-bold text-primary-custom fs-5">$60.00</span>
+                            </div>
+                            <p class="text-muted small mb-4 text-truncate">Authentic Middle Eastern stuffed vegetables.
+                            </p>
+
+                            <div class="border-top border-secondary border-opacity-25 pt-4 mt-auto">
+                                <form action="cart.html/add" method="POST" class="w-100">
+                                    <input type="hidden" name="_token" value="keILC6Wmmo8ALjNJAsbVJOW7oGzXrXqr8QDxSnDB">
+                                    <input type="hidden" name="meal_id" value="4">
+                                    <button type="submit"
+                                        class="btn btn-primary w-100 rounded-pill py-2 fw-semibold shadow-sm hover-lift">
+                                        <i class="fas fa-shopping-bag me-2"></i> Add to Cart
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-darker text-light border-top border-secondary border-secondary pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <a class="navbar-brand d-flex align-items-center mb-3 text-light" href="#">
+                        <i class="fas fa-utensils text-primary-custom me-2 fa-lg"></i>
+                        <span class="fw-bold h4 m-0">Wajbati</span>
+                    </a>
+                    <p class="text-light small">Connecting food lovers with home chefs. Experience the taste of home
+                        anywhere.</p>
+                </div>
+                <div class="col-md-2 col-6">
+                    <h6 class="fw-bold mb-3">Links</h6>
+                    <ul class="list-unstyled small text-light">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-light">Home</a></li>
+                        <li class="mb-2"><a href="meals.html" class="text-decoration-none text-light">Meals</a></li>
+                        <li class="mb-2"><a href="chefs.html" class="text-decoration-none text-light">Chefs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled small text-light">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Privacy
+                                Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Terms of
+                                Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Stay Updated</h6>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-primary" type="button"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary border-secondary pt-3 text-center small text-light">
+                &copy; 2026 Wajbati. All rights reserved. | Contact: contact@wajbati.com
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

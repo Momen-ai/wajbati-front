@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wajbati - Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .bg-primary-custom {
+            background-color: #ff6b6b;
+        }
+
+        .text-primary {
+            color: #ff6b6b !important;
+        }
+
+        .btn-primary {
+            background-color: #ff6b6b;
+            border-color: #ff6b6b;
+        }
+
+        .btn-primary:hover {
+            background-color: #fa5252;
+            border-color: #fa5252;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="auth-wrapper row g-0" style="min-height: 100vh;">
+        <!-- Left Side: Image -->
+        <div class="col-lg-6 d-none d-lg-block position-relative">
+            <div class="auth-image w-100 h-100"
+                style="background-image: url('images/hero-plate.png'); background-size: cover; background-position: center;">
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100"
+                style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6));"></div>
+            <div class="position-absolute bottom-0 start-0 p-5 text-light">
+                <h2 class="display-4 fw-bold text-light mb-3">Join Our Community</h2>
+                <p class="lead mb-0">
+                    Discover authentic homemade flavors or start your own kitchen journey with us.</p>
+            </div>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="col-lg-6 d-flex align-items-center justify-content-center bg-darker text-light">
+            <div class="p-4 p-md-5 w-100" style="max-width: 500px;">
+                <div class="d-flex align-items-center mb-5">
+                    <a href="index.html" class="text-decoration-none d-flex align-items-center text-light">
+                        <div class="rounded-circle bg-primary-custom d-flex align-items-center justify-content-center text-light me-2"
+                            style="width:32px;height:32px">
+                            <i class="fas fa-utensils small"></i>
+                        </div>
+                        <span class="fw-bold h5 m-0">Wajbati</span>
+                    </a>
+                </div>
+
+                <div class="mb-4">
+                    <h3 class="fw-bold">Create Account</h3>
+                    <p class="text-light">Fill in your details to get started.</p>
+                </div>
+
+                <form method="POST" action="register.html">
+                    <input type="hidden" name="_token" value="gFQHgYEfPBskxNqBFUmVzF1MDTQYVfP8nm5RFbjz" autocomplete="off">
+                    <div class="form-floating mb-3">
+                        <input type="text" name="name" class="form-control "
+                            id="nameInput" placeholder="Full Name" value="" required
+                            autofocus>
+                        <label for="nameInput">Full Name</label>
+                                            </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="email" name="email" class="form-control "
+                            id="emailInput" placeholder="Email Address" value="" required>
+                        <label for="emailInput">Email Address</label>
+                                            </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" name="phone" class="form-control "
+                            id="phoneInput" placeholder="Phone Number" value=""
+                            required>
+                        <label for="phoneInput">Phone Number</label>
+                                            </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="password" name="password"
+                            class="form-control " id="passwordInput"
+                            placeholder="Password" required autocomplete="new-password">
+                        <label for="passwordInput">Password</label>
+                                            </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="password" name="password_confirmation" class="form-control"
+                            id="confirmPasswordInput" placeholder="Confirm Password" required
+                            autocomplete="new-password">
+                        <label for="confirmPasswordInput">Confirm Password</label>
+                    </div>
+
+                    <div class="form-floating mb-4">
+                        <select name="role" class="form-select" id="roleSelect" aria-label="Role select">
+                            <option value="user">Customer</option>
+                            <option value="chef">Family (Chef)</option>
+                        </select>
+                        <label for="roleSelect">I want to join as</label>
+                    </div>
+
+                    <button class="btn btn-primary w-100 py-3 mb-4 shadow text-light"
+                        type="submit">Sign Up</button>
+
+                    <div class="text-center">
+                        <span class="text-light">Already have an account?</span>
+                        <a href="login.html"
+                            class="text-primary fw-bold text-decoration-none ms-1">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="PkwZ8XAcL05gdr9kOVibOcHZvcAHECQymAyTPHkr">
+
+    <title>Wajbati</title>
+
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="rounded-circle bg-primary-custom d-flex align-items-center justify-content-center text-light me-2"
+                    style="width:40px;height:40px">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <span class="brand-text">Wajbati</span>
+            </a>
+            <button class="navbar-toggler border border-secondary border-opacity-10" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="meals.html">Meals</a></li>
+                    <li class="nav-item"><a class="nav-link " href="chefs.html">Chefs</a></li>
+                    <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+                </ul>
+
+                <ul class="navbar-nav align-items-lg-center">
+                    <li class="nav-item me-3">
+                        <a class="nav-link position-relative px-2" href="cart.html">
+                            <i class="fa fa-shopping-bag fa-lg"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count border border-white">
+                                0
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown me-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe me-1"></i> English
+                        </a>
+                        <ul class="dropdown-menu border border-secondary border-opacity-10 shadow">
+                            <li><a class="dropdown-item" href="http://127.0.0.1:8080/lang/en">English</a></li>
+                            <li><a class="dropdown-item" href="http://127.0.0.1:8080/lang/ar">العربية</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item d-flex gap-2">
+                        <a href="login.html" class="btn btn-outline-primary btn-sm px-3">Login</a>
+                        <a href="register.html" class="btn btn-primary btn-sm px-3 shadow">Register</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Flash Messages -->
+
+
+    <!-- Content -->
+    <main>
+        <div class="container py-5">
+
+            <div class="d-flex align-items-center mb-4">
+
+                <h2 class="fw-bold mb-0 me-3">Shopping Cart</h2>
+
+                <span class="badge bg-secondary text-light text-light rounded-pill border">0 items</span>
+
+            </div>
+
+
+
+            <div class="col-12 text-center py-5">
+
+                <div class="mb-3 text-light"><i class="fas fa-shopping-basket fa-4x opacity-50"></i></div>
+
+                <h3>Your cart is empty</h3>
+
+                <p class="text-light mb-4">Looks like you haven't added any meals yet.</p>
+
+                <a href="meals.html" class="btn btn-primary px-4 py-2">Discover Meals</a>
+
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-darker text-light border-top border-secondary border-secondary pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <a class="navbar-brand d-flex align-items-center mb-3 text-light" href="#">
+                        <i class="fas fa-utensils text-primary-custom me-2 fa-lg"></i>
+                        <span class="fw-bold h4 m-0">Wajbati</span>
+                    </a>
+                    <p class="text-light small">Connecting food lovers with home chefs. Experience the taste of home
+                        anywhere.</p>
+                </div>
+                <div class="col-md-2 col-6">
+                    <h6 class="fw-bold mb-3">Links</h6>
+                    <ul class="list-unstyled small text-light">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-light">Home</a></li>
+                        <li class="mb-2"><a href="meals.html" class="text-decoration-none text-light">Meals</a></li>
+                        <li class="mb-2"><a href="chefs.html" class="text-decoration-none text-light">Chefs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled small text-light">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Privacy
+                                Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Terms of
+                                Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Stay Updated</h6>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-primary" type="button"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary border-secondary pt-3 text-center small text-light">
+                &copy; 2026 Wajbati. All rights reserved. | Contact: contact@wajbati.com
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(".remove-from-cart").click(function (e) {
+
+            e.preventDefault();
+
+            var ele = $(this);
+
+            if (confirm("Are you sure want to remove?")) {
+
+                $.ajax({
+
+                    url: 'cart.html/remove',
+
+                    method: "POST",
+
+                    data: {
+
+                        _token: 'PkwZ8XAcL05gdr9kOVibOcHZvcAHECQymAyTPHkr',
+
+                        id: ele.parents("tr").attr("data-id")
+
+                    },
+
+                    success: function (response) {
+
+                        window.location.reload();
+
+                    }
+
+                });
+
+            }
+
+        });
+
+
+
+        $(".quantity-input").change(function (e) {
+
+            e.preventDefault();
+
+            var ele = $(this);
+
+            $.ajax({
+
+                url: 'cart.html/update',
+
+                method: "PATCH",
+
+                data: {
+
+                    _token: 'PkwZ8XAcL05gdr9kOVibOcHZvcAHECQymAyTPHkr',
+
+                    id: ele.parents("tr").attr("data-id"),
+
+                    quantity: ele.parents("tr").find(".quantity-input").val()
+
+                },
+
+                success: function (response) {
+
+                    window.location.reload();
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
