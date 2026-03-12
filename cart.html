@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="PkwZ8XAcL05gdr9kOVibOcHZvcAHECQymAyTPHkr">
 
-    <title>Wajbati</title>
+    <title>Wajbati - Shopping Cart</title>
 
     <!-- Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -27,9 +26,9 @@
                 </div>
                 <span class="brand-text">Wajbati</span>
             </a>
-            <button class="navbar-toggler border border-secondary border-opacity-10" type="button"
+            <button class="navbar-toggler border-0 p-2 shadow-none" type="button"
                 data-bs-toggle="collapse" data-bs-target="#mainNav">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon-custom"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -41,11 +40,11 @@
 
                 <ul class="navbar-nav align-items-lg-center">
                     <li class="nav-item me-3">
-                        <a class="nav-link position-relative px-2" href="cart.html">
-                            <i class="fa fa-shopping-bag fa-lg"></i>
+                        <a class="nav-link position-relative px-2 active" href="cart.html">
+                            <i class="fa fa-shopping-bag fa-lg text-primary-custom"></i>
                             <span
                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count border border-white">
-                                0
+                                1
                             </span>
                         </a>
                     </li>
@@ -55,8 +54,8 @@
                             <i class="fas fa-globe me-1"></i> English
                         </a>
                         <ul class="dropdown-menu border border-secondary border-opacity-10 shadow">
-                            <li><a class="dropdown-item" href="http://127.0.0.1:8080/lang/en">English</a></li>
-                            <li><a class="dropdown-item" href="http://127.0.0.1:8080/lang/ar">العربية</a></li>
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">العربية</a></li>
                         </ul>
                     </li>
 
@@ -64,46 +63,125 @@
                         <a href="login.html" class="btn btn-outline-primary btn-sm px-3">Login</a>
                         <a href="register.html" class="btn btn-primary btn-sm px-3 shadow">Register</a>
                     </li>
-
-
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Flash Messages -->
-
-
     <!-- Content -->
-    <main>
-        <div class="container py-5">
-
-            <div class="d-flex align-items-center mb-4">
-
-                <h2 class="fw-bold mb-0 me-3">Shopping Cart</h2>
-
-                <span class="badge bg-secondary text-light text-light rounded-pill border">0 items</span>
-
-            </div>
-
-
-
-            <div class="col-12 text-center py-5">
-
-                <div class="mb-3 text-light"><i class="fas fa-shopping-basket fa-4x opacity-50"></i></div>
-
-                <h3>Your cart is empty</h3>
-
-                <p class="text-light mb-4">Looks like you haven't added any meals yet.</p>
-
-                <a href="meals.html" class="btn btn-primary px-4 py-2">Discover Meals</a>
-
-            </div>
-
+    <main class="container py-5">
+        <div class="d-flex align-items-center mb-4">
+            <h2 class="fw-bold mb-0 me-3">Shopping Cart</h2>
+            <span class="badge bg-primary-custom text-white rounded-pill border-0 px-3">1 Item</span>
         </div>
 
+        <!-- Empty Cart Message (Hidden by default) -->
+        <div class="row g-4 d-none" id="emptyCartMsg">
+            <div class="col-12 text-center py-5">
+                <div class="mb-4 text-muted opacity-25">
+                    <i class="fas fa-shopping-basket fa-5x"></i>
+                </div>
+                <h3 class="fw-bold">Your cart is empty</h3>
+                <p class="text-muted mb-4 px-3">Looks like you haven't added any delicious homemade meals yet.</p>
+                <a href="meals.html" class="btn btn-primary px-5 py-3 rounded-pill fw-bold shadow-lg">
+                    <i class="fas fa-search me-2"></i> Discover Meals
+                </a>
+            </div>
+        </div>
 
+        <div class="row g-4" id="cartContent">
+            <!-- Cart Items -->
+            <div class="col-lg-8">
+                <div class="card shadow-card border border-secondary border-opacity-10 mb-4 overflow-hidden">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-dark table-hover align-middle mb-0" style="background: transparent;">
+                                <thead class="bg-darker">
+                                    <tr>
+                                        <th class="border-0 p-3 ps-4" style="width: 45%; color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">Product</th>
+                                        <th class="border-0 p-3" style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">Price</th>
+                                        <th class="border-0 p-3 text-center" style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">Quantity</th>
+                                        <th class="border-0 p-3 text-end pe-4" style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">Total</th>
+                                        <th class="border-0 p-3"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Static Example Item -->
+                                    <tr class="border-secondary border-opacity-10">
+                                        <td class="p-3 ps-4 border-0">
+                                            <div class="d-flex align-items-center">
+                                                <div class="position-relative">
+                                                    <img src="images/meals/HTLNuKsEwWabiFHijoJXuod2TbUI0YlMtmOVrR2U.jpg" class="rounded-3 shadow-sm border border-secondary border-opacity-25"
+                                                        style="width: 70px; height: 70px; object-fit: cover;">
+                                                </div>
+                                                <div class="ms-3">
+                                                    <h6 class="mb-0 fw-bold text-white">Traditional Musakhn</h6>
+                                                    <small class="text-primary-custom fw-semibold">Chef Ahmed</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 border-0 fw-bold text-white">$50.00</td>
+                                        <td class="p-3 border-0 text-center">
+                                            <div class="d-inline-flex align-items-center bg-darker rounded-pill p-1 border border-secondary border-opacity-25">
+                                                <button class="btn btn-sm text-light border-0 px-2" onclick="this.nextElementSibling.stepDown()"><i class="fas fa-minus xs"></i></button>
+                                                <input type="number" class="form-control bg-transparent border-0 text-center p-0 text-white fw-bold" value="1" min="1" style="width: 40px; box-shadow: none;">
+                                                <button class="btn btn-sm text-light border-0 px-2" onclick="this.previousElementSibling.stepUp()"><i class="fas fa-plus xs"></i></button>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 border-0 text-end pe-4 fw-bold text-primary-custom">$50.00</td>
+                                        <td class="p-3 border-0 text-end pe-4">
+                                            <button class="btn btn-link text-danger p-0 opacity-75 hover-opacity-100 transition-all"><i class="fas fa-trash-alt"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-2 px-1">
+                    <a href="meals.html" class="btn btn-link text-decoration-none text-light fw-semibold p-0">
+                        <i class="fas fa-arrow-left me-2"></i> Continue Shopping
+                    </a>
+                    <button class="btn btn-outline-danger btn-sm rounded-pill px-3 opacity-50">Clear Cart</button>
+                </div>
+            </div>
 
+            <!-- Order Summary -->
+            <div class="col-lg-4">
+                <div class="card shadow-card border border-secondary border-opacity-10 p-4 position-sticky" style="top: 100px;">
+                    <h5 class="fw-bold mb-4">Order Summary</h5>
+
+                    <div class="d-flex justify-content-between mb-3 text-muted">
+                        <span class="small">Subtotal</span>
+                        <span class="fw-semibold text-white">$50.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3 text-muted">
+                        <span class="small">Delivery Fee</span>
+                        <span class="fw-semibold text-white">$5.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-4 text-muted">
+                        <span class="small">Tax (5%)</span>
+                        <span class="fw-semibold text-white">$2.50</span>
+                    </div>
+                    <hr class="border-secondary opacity-25 mb-4">
+                    <div class="d-flex justify-content-between mb-4">
+                        <span class="fw-bold h5 mb-0">Total</span>
+                        <div class="text-end">
+                            <span class="fw-bold h4 text-primary-custom mb-0">$57.50</span>
+                            <small class="d-block text-muted" style="font-size: 0.7rem;">Including VAT</small>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-lg w-100 shadow-lg rounded-pill fw-bold mb-3 py-3" style="letter-spacing: 1px;">
+                        CHECKOUT <i class="fas fa-chevron-right ms-2 small"></i>
+                    </button>
+
+                    <div class="text-center pt-2">
+                        <span class="text-muted small"><i class="fas fa-shield-alt text-success me-1"></i> 256-bit Secure Checkout</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -129,10 +207,8 @@
                 <div class="col-md-2 col-6">
                     <h6 class="fw-bold mb-3">Legal</h6>
                     <ul class="list-unstyled small text-light">
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Privacy
-                                Policy</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Terms of
-                                Service</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -148,81 +224,10 @@
             </div>
         </div>
     </footer>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-
-        $(".remove-from-cart").click(function (e) {
-
-            e.preventDefault();
-
-            var ele = $(this);
-
-            if (confirm("Are you sure want to remove?")) {
-
-                $.ajax({
-
-                    url: 'cart.html/remove',
-
-                    method: "POST",
-
-                    data: {
-
-                        _token: 'PkwZ8XAcL05gdr9kOVibOcHZvcAHECQymAyTPHkr',
-
-                        id: ele.parents("tr").attr("data-id")
-
-                    },
-
-                    success: function (response) {
-
-                        window.location.reload();
-
-                    }
-
-                });
-
-            }
-
-        });
-
-
-
-        $(".quantity-input").change(function (e) {
-
-            e.preventDefault();
-
-            var ele = $(this);
-
-            $.ajax({
-
-                url: 'cart.html/update',
-
-                method: "PATCH",
-
-                data: {
-
-                    _token: 'PkwZ8XAcL05gdr9kOVibOcHZvcAHECQymAyTPHkr',
-
-                    id: ele.parents("tr").attr("data-id"),
-
-                    quantity: ele.parents("tr").find(".quantity-input").val()
-
-                },
-
-                success: function (response) {
-
-                    window.location.reload();
-
-                }
-
-            });
-
-        });
-
-    </script>
-
 </body>
 
 </html>
